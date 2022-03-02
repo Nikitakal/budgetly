@@ -17,7 +17,7 @@ export default function AddExpenseModal({
   function handleSubmit(e) {
     e.preventDefault();
     addExpense({
-      descriptionRef: descriptionRef,
+      description: descriptionRef.current.value,
       amount: parseFloat(amountRef.current.value),
       budgetId: budgetIdRef.current.value,
     });
